@@ -1,0 +1,95 @@
+name: Bug report
+description: Report a defect in an Iridium Road component
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which layer owns this bug?
+      options:
+        - Carbon-XDNA
+        - Diamond-accel0
+        - Steel
+        - NPUTOP / observability
+        - Examples / utilities
+        - Organization / docs
+        - Unsure
+    validations:
+      required: true
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: Component maturity (from its README)
+      options:
+        - Experimental
+        - Developer Preview
+        - Beta
+        - Stable
+        - In development
+        - Planned
+        - Archived
+        - Unknown
+    validations:
+      required: true
+  - type: input
+    id: component_version
+    attributes:
+      label: Component version
+      description: Tag, commit, or package version if known
+      placeholder: e.g. v0.6.0 or commit SHA
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+      description: NPU / platform model. Use N/A when not applicable (docs-only, tooling-only, etc.).
+      placeholder: e.g. AMD XDNA (specify product if known), or N/A
+  - type: input
+    id: fedora_version
+    attributes:
+      label: Fedora version
+      description: Use N/A when not applicable.
+      placeholder: e.g. Fedora 42, or N/A
+  - type: input
+    id: kernel_version
+    attributes:
+      label: Kernel version
+      description: Use N/A when not applicable.
+      placeholder: e.g. 6.x.y, or N/A
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps another person can follow
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / diagnostics
+      description: Relevant dmesg, runtime logs, or tool output (no secrets)
+      render: shell

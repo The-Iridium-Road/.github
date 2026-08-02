@@ -1,0 +1,20 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/The-Iridium-Road/.github/blob/main/SECURITY.md
+    about: Do not file security issues publicly. Use private vulnerability reporting on the affected repository (see SECURITY.md).
+  - name: Security process (Discussions)
+    url: https://github.com/The-Iridium-Road/.github/discussions/categories/security
+    about: When Discussions are enabled — process questions only. Never post vulnerabilities here.
+  - name: Support guidance
+    url: https://github.com/The-Iridium-Road/.github/blob/main/SUPPORT.md
+    about: Where and how to ask for help.
+  - name: Architecture overview
+    url: https://github.com/The-Iridium-Road/.github/blob/main/profile/ARCHITECTURE.md
+    about: Component ownership and stack boundaries.
+  - name: Project scope
+    url: https://github.com/The-Iridium-Road/.github/blob/main/PROJECT_SCOPE.md
+    about: What is in scope, and what must not steer the architecture.
+  - name: Governance
+    url: https://github.com/The-Iridium-Road/.github/blob/main/GOVERNANCE.md
+    about: Maintainer-led decision process for proposals and merges.
