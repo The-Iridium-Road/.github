@@ -1,9 +1,12 @@
 # The Iridium Road
 
 Summary
-Organization profile for The Iridium Road: what it is, what exists today, and
-where to report problems. General-purpose NPU computing for Linux—not an
-AI-first or webcam-effects project.
+Organization profile for The Iridium Road—what it is, what exists today, and
+where to go next. General-purpose NPU computing for Linux. Not an AI-first
+project. Not a webcam-effects demo stack.
+
+The full control-plane map (directory of this `.github` repository, document
+guide, landing order) lives in the repository root [README.md](../README.md).
 
 ## Mission
 
@@ -11,13 +14,12 @@ Building a Linux-native stack for compiling, executing, observing, and
 recovering arbitrary supported programs on AMD NPUs.
 
 On-die compute often sits behind incomplete drivers, fragmented vendor tooling,
-and heavyweight compiler stacks. This project aims to make the hardware
+and heavyweight compiler stacks. This project aims to make that hardware
 programmable and usable through a coherent Linux stack.
 
-The aim is that end users looking for “NPU programs Linux” can find installable,
-useful software, and that developers looking for “NPU programming Linux” can
-find docs, examples, tooling, and reliable interfaces—not disconnected
-experiments. That destination is not claimed as finished today.
+The aim—not a claim of completion today—is that end users can find useful NPU
+software for Linux, and developers can find docs, examples, tooling, and
+reliable interfaces instead of disconnected experiments.
 
 The infrastructure is workload-neutral. AI and machine learning may use the
 platform; they do not steer its architecture. Details:
@@ -55,8 +57,7 @@ Examples / utilities — Planned category, not a published repo yet
 ```
 
 Versions and maturity can change; treat each repository README as authoritative.
-Each repo should state maturity, hardware, dependencies, limits, and install risk
-near the top of its README. Focus today: AMD XDNA NPUs on Fedora.
+Focus today: AMD XDNA NPUs on Fedora.
 
 ## Repository map
 
@@ -75,8 +76,9 @@ Road repositories.
 ## Reporting issues and security
 
 - Bugs and support: open an Issue on the relevant repository.
+  [SUPPORT.md](../SUPPORT.md)
 - Security: GitHub private vulnerability reporting on the affected repository.
-  See [SECURITY.md](../SECURITY.md).
+  [SECURITY.md](../SECURITY.md)
 
 ## Principles
 
