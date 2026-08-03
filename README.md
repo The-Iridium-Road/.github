@@ -41,11 +41,11 @@ Carbon-XDNA
 
 Steel
   Compile-only tooling: compile, optimize, construct executable NPU artifacts
-  Public at https://github.com/The-Iridium-Road/Steel (v0.1.0)
+  Public at https://github.com/The-Iridium-Road/Steel (v0.1.2)
   Derived from upstream Iron; heavily changed for Diamond-accel0
 
 Diamond-accel0
-  Userspace runtime under active development
+  Userspace runtime in heavy development; not release-ready (v0.0.3)
   lifecycle · scheduling · orchestration · dispatch · APIs
   Not a kernel driver; does not own artifact production
 
@@ -55,6 +55,26 @@ Observability and utilities (planned)
 
 The name is intentional: upstream Iron, refined for a stack that already has
 Carbon, becomes Steel—the compile-only layer Diamond consumes.
+
+### Steel for integrators (since v0.1.0)
+
+Current tip: Experimental v0.1.2
+(https://github.com/The-Iridium-Road/Steel/releases/tag/v0.1.2).
+Paired toolchain Release: toolchain-v2026.08.2
+(https://github.com/The-Iridium-Road/Steel/releases/tag/toolchain-v2026.08.2).
+Product tags and toolchain tags are independent; pair via `steel/toolchain.lock`.
+
+- Still compile-only `libsteel_bridge` / `steel_forge`: no NPU open; production
+  link line stays free of XRT/device libs.
+- Since v0.1.1: pinned toolchain Release via `steel/toolchain.lock` and
+  `light_steel_forge.sh` (not a hand-copied Iron tree).
+- Since v0.1.2: FULL packaging uses forge hrx `xclbinutil` inside the lit
+  bag—not host `/opt/xilinx/xrt`. INSTS unchanged.
+- Since v0.1.2: CMake is embed-safe (`CMAKE_CURRENT_SOURCE_DIR`); Diamond can
+  `add_subdirectory` Steel without rewriting Steel’s source-root paths.
+- Depth: Steel README, `steel/STEEL_API.md`, `forge/README.md`, and releases.
+  Ownership and contract summary:
+  [profile/ARCHITECTURE.md](profile/ARCHITECTURE.md).
 
 ```text
 Applications / utilities
@@ -81,8 +101,8 @@ and Steel’s ACKNOWLEDGEMENTS for provenance.
 
 ```text
 Carbon-XDNA — Developer Preview, v0.6.0 (current focus of active use)
-Steel — Experimental, v0.1.0 — https://github.com/The-Iridium-Road/Steel
-Diamond-accel0 — Experimental, v0.0.5
+Steel — Experimental, v0.1.2 — https://github.com/The-Iridium-Road/Steel
+Diamond-accel0 — In development, v0.0.3 — heavy development; not release-ready
 NPUTOP — Planned; prototype exists elsewhere, not presented as org-ready yet
 Examples / utilities — Planned category, not a published repo yet
 ```
@@ -157,6 +177,7 @@ Start here if you want…
 - How to send a change → [CONTRIBUTING.md](CONTRIBUTING.md)
 - How to report a vulnerability → [SECURITY.md](SECURITY.md)
 - Steel repository → https://github.com/The-Iridium-Road/Steel
+- Steel release line → [docs/operations/RELEASE_CONVENTIONS.md](docs/operations/RELEASE_CONVENTIONS.md)
 - Historical Steel v0.1.0 ship criteria → [docs/operations/STEEL_V0_1_0_GATE.md](docs/operations/STEEL_V0_1_0_GATE.md)
 - How repos land under the org → [docs/operations/REPOSITORY_MIGRATION.md](docs/operations/REPOSITORY_MIGRATION.md)
 
@@ -165,7 +186,7 @@ Start here if you want…
 ```text
 1. .github          (this repository)
 2. Carbon-XDNA
-3. Steel            (landed — v0.1.0 at The-Iridium-Road/Steel)
+3. Steel            (landed — v0.1.2 at The-Iridium-Road/Steel)
 4. Diamond-accel0
 5. NPUTOP           (when presentable)
 6. Examples         (later)

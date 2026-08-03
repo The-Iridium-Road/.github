@@ -33,12 +33,15 @@ Landing order (runtime relationships are in [ARCHITECTURE.md](ARCHITECTURE.md)):
   capability discovery, execution transport, diagnostics, observability, fault
   containment). Maturity: see Current status.
 - Steel — Compile-only tooling to compile, optimize, and construct executable
-  NPU artifacts. Public at https://github.com/The-Iridium-Road/Steel (v0.1.0).
+  NPU artifacts. Public at https://github.com/The-Iridium-Road/Steel (v0.1.2).
   Derived from upstream Iron; heavily modified for Diamond-accel0. The name is
-  intentional: Iron + Carbon → Steel.
-- Diamond-accel0 — Userspace runtime under active development (lifecycle,
-  scheduling, artifact selection, compile orchestration, dispatch, APIs). Not a
-  kernel driver; does not own artifact production (Steel does).
+  intentional: Iron + Carbon → Steel. Integrator notes (toolchain pin, forge
+  FULL packager, CMake embed): root [README.md](../README.md) and
+  [ARCHITECTURE.md](ARCHITECTURE.md).
+- Diamond-accel0 — Userspace runtime in heavy development; not release-ready
+  (v0.0.3). Lifecycle, scheduling, artifact selection, compile orchestration,
+  dispatch, APIs. Not a kernel driver; does not own artifact production (Steel
+  does).
 - Observability and utilities — Planned supporting work: monitoring, diagnostics,
   profiling, compatibility checks, reference workloads, and practical NPU
   applications.
@@ -50,8 +53,8 @@ Issues and pull requests are proposals, not merge obligations. See
 
 ```text
 Carbon-XDNA — Developer Preview, v0.6.0 (current focus of active use)
-Steel — Experimental, v0.1.0 — https://github.com/The-Iridium-Road/Steel
-Diamond-accel0 — Experimental, v0.0.5
+Steel — Experimental, v0.1.2 — https://github.com/The-Iridium-Road/Steel
+Diamond-accel0 — In development, v0.0.3 — heavy development; not release-ready
 NPUTOP — Planned; prototype exists elsewhere, not presented as org-ready yet
 Examples / utilities — Planned category, not a published repo yet
 ```

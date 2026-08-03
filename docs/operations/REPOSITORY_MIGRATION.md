@@ -26,11 +26,12 @@ Do not migrate a repo merely because it once mentioned NPUs.
 Carbon-XDNA — core — Developer Preview / v0.6.0
   Migrate first after .github
 
-Steel — core / tooling — Experimental / v0.1.0
+Steel — core / tooling — Experimental / v0.1.2
   Landed: https://github.com/The-Iridium-Road/Steel
   (Iron-derived; heavily modified for Diamond-accel0)
 
-Diamond-accel0 — core — Experimental / v0.0.5
+Diamond-accel0 — core — In development / v0.0.3
+  Heavy development; not release-ready
   Migrate after Steel’s org landing (Carbon → Steel → Diamond)
 
 NPUTOP — tooling — Planned / prototype
@@ -55,7 +56,7 @@ Iron / Peano / MLIR-AIE — unrelated (external) — Upstream/reference
 
 1. `.github` (organization control plane — this repository)
 2. Carbon-XDNA
-3. Steel — landed at https://github.com/The-Iridium-Road/Steel (v0.1.0)
+3. Steel — landed at https://github.com/The-Iridium-Road/Steel (v0.1.2)
 4. Diamond-accel0
 5. NPUTOP or other observability projects (only if presentable)
 6. Examples and utilities later
@@ -113,14 +114,15 @@ After transfer:
 
 ## Steel landed verification
 
-Steel v0.1.0 is public. Confirm org materials stay consistent:
+Steel is public through v0.1.2. Confirm org materials stay consistent:
 
 - [x] Repository exists: https://github.com/The-Iridium-Road/Steel
-- [x] Tag `v0.1.0` published
-- [ ] Org profile / root README / SUPPORT / CONTRIBUTING link the live repo
+- [x] Tag `v0.1.0` published (first ship)
+- [x] Tags through `v0.1.2` published (current tip)
+- [x] Org profile / root README / SUPPORT / CONTRIBUTING link the live repo
 - [ ] Private vulnerability reporting enabled on Steel
 - [ ] Pins updated when ready ([ORG_BOOTSTRAP.md](ORG_BOOTSTRAP.md))
-- [ ] Historical gate record remains accurate
+- [x] Historical gate record remains accurate
       ([STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md))
 
 ## Suggested repository descriptions

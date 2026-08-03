@@ -26,7 +26,7 @@ Applications / utilities
  AMD XDNA hardware / firmware
 ```
 
-Landing order: `.github` → Carbon-XDNA → Steel (landed at v0.1.0) →
+Landing order: `.github` → Carbon-XDNA → Steel (landed at v0.1.2) →
 Diamond-accel0 → NPUTOP → examples. See
 [REPOSITORY_MIGRATION.md](../docs/operations/REPOSITORY_MIGRATION.md).
 
@@ -61,15 +61,29 @@ Does not own: execution policy or compilation.
 
 ### Steel status and provenance
 
-Steel v0.1.0 is published. Further polish and features are v0.1.1 or later.
-The historical ship criteria that defined the first public tag are recorded in
-[STEEL_V0_1_0_GATE.md](../docs/operations/STEEL_V0_1_0_GATE.md).
+Current tip: Experimental v0.1.2
+(https://github.com/The-Iridium-Road/Steel/releases/tag/v0.1.2).
+Paired toolchain Release: toolchain-v2026.08.2. Product tags and toolchain tags
+are independent; consumers pair via `steel/toolchain.lock`.
 
-Steel is a compile-only library meant to be consumed by Diamond-accel0. It is
-derived from upstream Iron and has been heavily modified, optimized, and
-re-architected for that runtime. Upstream Iron remains external; Iridium Road
-does not claim ownership of Iron, Peano, or MLIR-AIE. Credit and lineage detail
-live in Steel’s ACKNOWLEDGEMENTS.md.
+Steel remains compile-only artifact production for Diamond-accel0: no NPU open,
+no XRT in the production library. Integrator contract since the 0.1 line: pinned
+toolchain Release (since v0.1.1); forge-owned FULL packager via hrx `xclbinutil`
+inside the lit bag—not host `/opt/xilinx/xrt` (since v0.1.2); embed-safe CMake
+(`CMAKE_CURRENT_SOURCE_DIR`) so Diamond can `add_subdirectory` without path
+hacks (since v0.1.2). Public ABI shapes since v0.1.0 are unchanged; version
+macros moved 0.1.0 → 0.1.2. Depth: Steel README, STEEL_API.md, forge README,
+ACKNOWLEDGEMENTS, and releases—not duplicated here.
+
+The historical ship criteria that defined the first public tag (v0.1.0) are
+recorded in [STEEL_V0_1_0_GATE.md](../docs/operations/STEEL_V0_1_0_GATE.md).
+Release line summary:
+[RELEASE_CONVENTIONS.md](../docs/operations/RELEASE_CONVENTIONS.md).
+
+Steel is derived from upstream Iron and has been heavily modified, optimized,
+and re-architected for Diamond-accel0. Upstream Iron remains external; Iridium
+Road does not claim ownership of Iron, Peano, or MLIR-AIE. Credit and lineage
+detail live in Steel’s ACKNOWLEDGEMENTS.md.
 
 ### Diamond and compilation
 

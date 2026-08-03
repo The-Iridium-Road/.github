@@ -49,19 +49,27 @@ Do not transfer until unresolved provenance questions are written down.
 
 ## Steel toolchain ancestry
 
-Steel v0.1.0 is published at https://github.com/The-Iridium-Road/Steel. It is
-derived from upstream Iron and has been heavily modified, optimized, and
-re-architected for Diamond-accel0. Upstream Iron is not an Iridium Road product.
+Steel product tip is Experimental v0.1.2 at
+https://github.com/The-Iridium-Road/Steel. It is derived from upstream Iron and
+has been heavily modified, optimized, and re-architected for Diamond-accel0.
+Upstream Iron is not an Iridium Road product.
 
 Primary inventory lives in the Steel repository:
 
 - LICENSE, NOTICE
 - ACKNOWLEDGEMENTS.md (Iron origin, credit)
 - steel/LICENSE_INVENTORY.md
+- LEGAL/ (including hrx KEEP for the forge FULL packager)
+
+Toolchain Releases carry scrubbed LEGAL / notices. The FULL packager KEEP
+component is documented in Steel `LEGAL/` (hrx). System XRT is not redistributed
+and is not a supported packager. Do not paste full LEGAL tables into this
+control plane.
 
 Org materials should describe Steel as Iridium Road compile-only artifact
-tooling without claiming ownership of Iron, Peano, or MLIR-AIE. Historical ship
-criteria: [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md).
+tooling without claiming ownership of Iron, Peano, or MLIR-AIE. Historical first
+ship criteria: [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md). Release line:
+[RELEASE_CONVENTIONS.md](RELEASE_CONVENTIONS.md).
 
 Maintainer checks (keep current as Steel evolves):
 

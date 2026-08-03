@@ -96,5 +96,5 @@ idea has no merit elsewhere.
 - [PROJECT_SCOPE.md](PROJECT_SCOPE.md) — mission boundaries and acceptance tests
 - [CONTRIBUTING.md](CONTRIBUTING.md) — how to propose changes
 - [profile/ARCHITECTURE.md](profile/ARCHITECTURE.md) — component ownership
-- https://github.com/The-Iridium-Road/Steel — Steel (v0.1.0)
+- https://github.com/The-Iridium-Road/Steel — Steel (v0.1.2)
 - [docs/operations/STEEL_V0_1_0_GATE.md](docs/operations/STEEL_V0_1_0_GATE.md) — historical Steel v0.1.0 ship criteria
