@@ -26,9 +26,15 @@ Applications / utilities
  AMD XDNA hardware / firmware
 ```
 
-Landing order: `.github` → Carbon-XDNA → Steel (at v0.1.0) → Diamond-accel0 →
-NPUTOP → examples. See
+Landing order: `.github` → Carbon-XDNA → Steel (landed at v0.1.0) →
+Diamond-accel0 → NPUTOP → examples. See
 [REPOSITORY_MIGRATION.md](../docs/operations/REPOSITORY_MIGRATION.md).
+
+## Naming
+
+The name is intentional: upstream Iron, refined for a stack that already has
+Carbon, becomes Steel—the compile-only layer Diamond consumes. Deliberate
+metallurgy, not decoration.
 
 ## Ownership
 
@@ -45,28 +51,25 @@ Does not own: kernel hardware management; low-level artifact production.
 Steel
 Owns: compiling, optimizing, and constructing executable NPU artifacts.
 Does not own: runtime scheduling, NPU dispatch, kernel interfaces.
+Does not open the NPU or link XRT in the production library.
+
+Repository: https://github.com/The-Iridium-Road/Steel
 
 NPUTOP / tools
 Owns: inspection, diagnostics, telemetry, compatibility checks.
 Does not own: execution policy or compilation.
 
-### Steel publish gate
+### Steel status and provenance
 
-Steel is a public component: compile-only NPU artifact tooling prepared for
-Diamond integration. Independent component; expected to be part of or consumed
-by Diamond.
+Steel v0.1.0 is published. Further polish and features are v0.1.1 or later.
+The historical ship criteria that defined the first public tag are recorded in
+[STEEL_V0_1_0_GATE.md](../docs/operations/STEEL_V0_1_0_GATE.md).
 
-Until the [v0.1.0 gate](../docs/operations/STEEL_V0_1_0_GATE.md) passes:
-
-- Keep Steel on maps without an organization repository URL.
-- The gate is the ship criteria—not unbounded polishing.
-
-When the gate passes:
-
-- Publish `The-Iridium-Road/Steel` under the org (prefer create over
-  personal-repo-then-transfer).
-- Tag v0.1.0 only after the gate checklist passes; further polish is v0.1.1 or
-  v0.2.0.
+Steel is a compile-only library meant to be consumed by Diamond-accel0. It is
+derived from upstream Iron and has been heavily modified, optimized, and
+re-architected for that runtime. Upstream Iron remains external; Iridium Road
+does not claim ownership of Iron, Peano, or MLIR-AIE. Credit and lineage detail
+live in Steel’s ACKNOWLEDGEMENTS.md.
 
 ### Diamond and compilation
 
@@ -78,11 +81,12 @@ Do not describe Diamond as the compiler itself.
 
 Upstream or provenance references only:
 
-- Iron — AMD/related compiler tooling
+- Iron — upstream compiler lineage that Steel derives from (heavily modified
+  for Diamond-accel0; not an Iridium Road product)
 - Peano
 - MLIR-AIE
 
-Not Iridium Road products; do not present them as organization repositories.
+Do not present these as organization repositories.
 
 ## Maturity vocabulary
 

@@ -1,47 +1,42 @@
-# Steel v0.1.0 Release Gate
+# Steel v0.1.0 Release Gate (historical)
 
 Summary
-Finite ship criteria for publishing `The-Iridium-Road/Steel`. Exists so
-“polishing” does not become an infinite verb. Prefer creating the repo under the
-org rather than personal-account-then-transfer.
+Ship criteria that defined the first public Steel release. v0.1.0 is published
+at https://github.com/The-Iridium-Road/Steel. This document is kept as the
+record of what “done enough to ship” meant—not as an open blocker list.
 
-Steel is a public component name before this gate passes; the organization
-repository URL and v0.1.0 tag wait until every item below is checked.
+Further work belongs in v0.1.1 or v0.2.0.
 
-## Gate checklist
+## Outcome
 
-- [ ] Clean production build from a fresh checkout
-- [ ] Public headers are self-contained
-- [ ] `steel_forge_request_t` extensibility decision resolved
-- [ ] Failure diagnostics remain retrievable
-- [ ] Compiler subprocess timeout and cleanup behavior defined
-- [ ] Vector-add smoke passes cold and warm
-- [ ] Failure-injection tests pass
-- [ ] No device access or XRT linkage in the production library
-- [ ] Dependency and inherited-code licenses inventoried
-      (see [LICENSE_AND_PROVENANCE.md](LICENSE_AND_PROVENANCE.md))
-- [ ] Installation and minimal-use instructions work
-- [ ] Known limitations are documented
-- [ ] Version reports `0.1.0`
-- [ ] Repository history contains no secrets, generated junk, or giant artifacts
-- [ ] Tag and release notes prepared
+- Repository: https://github.com/The-Iridium-Road/Steel
+- Tag: v0.1.0
+- Role: compile-only library for Diamond-accel0; derived from upstream Iron with
+  heavy modification for that runtime
 
-## Ship rule
+## Gate checklist (criteria that defined v0.1.0)
 
-Once every item passes: ship it.
+- [x] Clean production build from a fresh checkout
+- [x] Public headers are self-contained
+- [x] `steel_forge_request_t` extensibility decision resolved
+- [x] Failure diagnostics remain retrievable
+- [x] Compiler subprocess timeout and cleanup behavior defined
+- [x] Vector-add smoke passes cold and warm
+- [x] Failure-injection tests pass
+- [x] No device access or XRT linkage in the production library
+- [x] Dependency and inherited-code licenses inventoried
+      (see Steel LICENSE, NOTICE, ACKNOWLEDGEMENTS, steel/LICENSE_INVENTORY.md
+      and [LICENSE_AND_PROVENANCE.md](LICENSE_AND_PROVENANCE.md))
+- [x] Installation and minimal-use instructions work
+- [x] Known limitations are documented
+- [x] Version reports `0.1.0`
+- [x] Repository history contains no secrets, generated junk, or giant artifacts
+- [x] Tag and release notes prepared
 
-Anything else becomes v0.1.1 or v0.2.0. Steel does not need to emerge as an
-ABI-complete civilization.
+## Landed verification (maintainers)
 
-After ship (required to consider the repository landed):
+Confirm after publish (live org actions—not implied by editing this file):
 
-- [ ] Create `The-Iridium-Road/Steel` under the organization when possible
-- [ ] Publish tag `v0.1.0` and release notes
-- [ ] Link Steel from [profile/README.md](../../profile/README.md) and pins per
-      [ORG_BOOTSTRAP.md](ORG_BOOTSTRAP.md)
-- [ ] Required: enable private vulnerability reporting on the repository
-      (Steel is not landed until this is on)
-
-This document does not create the repository or cut the release by itself.
-Live publish requires an explicit maintainer decision after the checklist is
-complete.
+- [ ] Org profile and root README link Steel correctly
+- [ ] Private vulnerability reporting enabled on The-Iridium-Road/Steel
+- [ ] Pins updated when ready ([ORG_BOOTSTRAP.md](ORG_BOOTSTRAP.md))

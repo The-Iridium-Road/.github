@@ -11,7 +11,8 @@ Open an Issue on the owning repository:
 ```text
 Kernel / driver → Carbon-XDNA
 Runtime / execution / APIs → Diamond-accel0
-Compilation / artifacts → Steel (when the public repository exists)
+Compilation / artifacts → Steel
+  https://github.com/The-Iridium-Road/Steel
 Monitoring / diagnostics → the relevant observability repository
 ```
 

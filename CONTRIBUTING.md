@@ -32,8 +32,7 @@ Also read:
 ```text
 Kernel / transport / capabilities / driver observability → Carbon-XDNA
 Artifact compile / optimize / construct → Steel
-  (public component; org repo after v0.1.0 gate —
-   docs/operations/STEEL_V0_1_0_GATE.md)
+  https://github.com/The-Iridium-Road/Steel
 Runtime / scheduling / dispatch / APIs / compile orchestration → Diamond-accel0
 Monitoring / diagnostics / profiling → observability tools (e.g. NPUTOP when published)
 ```

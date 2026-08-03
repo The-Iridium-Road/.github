@@ -41,7 +41,8 @@ Carbon-XDNA
 
 Steel
   Compile-only tooling: compile, optimize, construct executable NPU artifacts
-  Public component name; org repository only after the v0.1.0 gate
+  Public at https://github.com/The-Iridium-Road/Steel (v0.1.0)
+  Derived from upstream Iron; heavily changed for Diamond-accel0
 
 Diamond-accel0
   Userspace runtime under active development
@@ -51,6 +52,9 @@ Diamond-accel0
 Observability and utilities (planned)
   monitoring · diagnostics · profiling · examples · practical applications
 ```
+
+The name is intentional: upstream Iron, refined for a stack that already has
+Carbon, becomes Steel—the compile-only layer Diamond consumes.
 
 ```text
 Applications / utilities
@@ -69,14 +73,15 @@ Applications / utilities
  AMD XDNA hardware / firmware
 ```
 
-Iron, Peano, and MLIR-AIE are external upstream/reference tooling. They are not
-Iridium Road repositories.
+Iron, Peano, and MLIR-AIE remain external upstream/reference tooling. They are
+not Iridium Road repositories. See [profile/ARCHITECTURE.md](profile/ARCHITECTURE.md)
+and Steel’s ACKNOWLEDGEMENTS for provenance.
 
 ## Current status
 
 ```text
 Carbon-XDNA — Developer Preview, v0.6.0 (current focus of active use)
-Steel — In development, pre-v0.1.0; no org repository until the v0.1.0 gate
+Steel — Experimental, v0.1.0 — https://github.com/The-Iridium-Road/Steel
 Diamond-accel0 — Experimental, v0.0.5
 NPUTOP — Planned; prototype exists elsewhere, not presented as org-ready yet
 Examples / utilities — Planned category, not a published repo yet
@@ -138,7 +143,7 @@ What lives in this `.github` control-plane repository:
         ├── REPOSITORY_MIGRATION.md
         ├── LICENSE_AND_PROVENANCE.md
         ├── RELEASE_CONVENTIONS.md
-        └── STEEL_V0_1_0_GATE.md
+        └── STEEL_V0_1_0_GATE.md   Historical v0.1.0 ship criteria
 ```
 
 ## Document guide
@@ -151,22 +156,23 @@ Start here if you want…
 - Whether a PR is owed a merge → [GOVERNANCE.md](GOVERNANCE.md)
 - How to send a change → [CONTRIBUTING.md](CONTRIBUTING.md)
 - How to report a vulnerability → [SECURITY.md](SECURITY.md)
-- How Steel ships → [docs/operations/STEEL_V0_1_0_GATE.md](docs/operations/STEEL_V0_1_0_GATE.md)
+- Steel repository → https://github.com/The-Iridium-Road/Steel
+- Historical Steel v0.1.0 ship criteria → [docs/operations/STEEL_V0_1_0_GATE.md](docs/operations/STEEL_V0_1_0_GATE.md)
 - How repos land under the org → [docs/operations/REPOSITORY_MIGRATION.md](docs/operations/REPOSITORY_MIGRATION.md)
 
-## Intended landing order (when live bootstrap is approved)
+## Intended landing order
 
 ```text
 1. .github          (this repository)
 2. Carbon-XDNA
-3. Steel            (after v0.1.0 gate; create under the org)
+3. Steel            (landed — v0.1.0 at The-Iridium-Road/Steel)
 4. Diamond-accel0
 5. NPUTOP           (when presentable)
 6. Examples         (later)
 ```
 
-Editing checklists in `docs/operations/` does not transfer repositories, change
-org settings, or publish Steel.
+Editing checklists in `docs/operations/` does not transfer repositories or change
+org settings by itself.
 
 ## License
 

@@ -2,8 +2,8 @@
 
 Summary
 How versions, maturity labels, and changelogs work across Iridium Road repos.
-Steel’s finite ship gate lives in STEEL_V0_1_0_GATE.md. Cutting releases and
-pins are live actions after explicit approval.
+Steel v0.1.0 ship criteria are historical in STEEL_V0_1_0_GATE.md. Cutting
+releases and pins are live actions after explicit approval.
 
 ## Version tags
 
@@ -29,8 +29,7 @@ Current public expectations (update when reality changes):
 
 ```text
 Carbon-XDNA — Developer Preview, v0.6.0
-Steel — In development, pre-v0.1.0; lands in org after Carbon once
-  STEEL_V0_1_0_GATE.md passes (before Diamond in landing order)
+Steel — Experimental, v0.1.0 — https://github.com/The-Iridium-Road/Steel
 Diamond-accel0 — Experimental, v0.0.5
 NPUTOP — Planned; prototype / integration pending
 Examples / utilities — Planned category, not a fake repository
@@ -45,12 +44,10 @@ Examples / utilities — Planned category, not a fake repository
 
 ## Steel v0.1.0
 
-The complete finite gate, ship rule, and post-ship steps live in
-[STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md).
+Published: https://github.com/The-Iridium-Road/Steel
 
-No organization Steel repository URL until the gate passes; then ship v0.1.0 and
-create under `The-Iridium-Road` when possible. Further polish is v0.1.1 or
-v0.2.0—not a reason to delay the first tag.
+The historical ship criteria are in [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md)
+(gate closed). Further polish and features are v0.1.1 or v0.2.0.
 
 ## Relationship to live bootstrap
 

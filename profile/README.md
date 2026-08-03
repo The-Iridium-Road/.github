@@ -32,10 +32,10 @@ Landing order (runtime relationships are in [ARCHITECTURE.md](ARCHITECTURE.md)):
 - Carbon-XDNA — Fedora-oriented AMD XDNA kernel driver stack (device lifecycle,
   capability discovery, execution transport, diagnostics, observability, fault
   containment). Maturity: see Current status.
-- Steel — Compile-only tooling intended to compile, optimize, and construct
-  executable NPU artifacts. Public component name; organization repository only
-  after the [v0.1.0 gate](../docs/operations/STEEL_V0_1_0_GATE.md). Prefer
-  creating it under `The-Iridium-Road`.
+- Steel — Compile-only tooling to compile, optimize, and construct executable
+  NPU artifacts. Public at https://github.com/The-Iridium-Road/Steel (v0.1.0).
+  Derived from upstream Iron; heavily modified for Diamond-accel0. The name is
+  intentional: Iron + Carbon → Steel.
 - Diamond-accel0 — Userspace runtime under active development (lifecycle,
   scheduling, artifact selection, compile orchestration, dispatch, APIs). Not a
   kernel driver; does not own artifact production (Steel does).
@@ -50,7 +50,7 @@ Issues and pull requests are proposals, not merge obligations. See
 
 ```text
 Carbon-XDNA — Developer Preview, v0.6.0 (current focus of active use)
-Steel — In development, pre-v0.1.0; no org repository until the v0.1.0 gate
+Steel — Experimental, v0.1.0 — https://github.com/The-Iridium-Road/Steel
 Diamond-accel0 — Experimental, v0.0.5
 NPUTOP — Planned; prototype exists elsewhere, not presented as org-ready yet
 Examples / utilities — Planned category, not a published repo yet
@@ -63,7 +63,8 @@ Focus today: AMD XDNA NPUs on Fedora.
 
 ```text
 Carbon-XDNA — Fedora-oriented AMD XDNA kernel driver stack
-Steel — Compilation and executable artifact construction (repo planned at v0.1.0)
+Steel — Compilation and executable artifact construction
+        https://github.com/The-Iridium-Road/Steel
 Diamond-accel0 — Userspace runtime aimed at arbitrary supported NPU execution
 NPU observability tools — Monitoring, diagnostics, profiling, inspection (planned)
 Examples and utilities — Reference workloads and practical applications (planned)
@@ -71,7 +72,8 @@ Specifications and research — Decisions, measurements, compatibility data (as 
 ```
 
 Iron, Peano, and MLIR-AIE are external upstream/reference tooling—not Iridium
-Road repositories.
+Road repositories. Steel’s Iron lineage and credits are documented in Steel’s
+ACKNOWLEDGEMENTS.md.
 
 ## Reporting issues and security
 

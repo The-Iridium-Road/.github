@@ -13,8 +13,9 @@ Organization .github control-plane repo — Apache-2.0 (see root LICENSE)
 Carbon / kernel-oriented code — preserve applicable Linux/kernel licensing;
   generally GPL-2.0-only for kernel modules and kernel-derived material
 
-Original userspace (e.g. Diamond, Steel as original work) — prefer Apache-2.0
-  for new original code (explicit patent grant)
+Original userspace (e.g. Diamond; new Steel code) — prefer Apache-2.0 for new
+  original code (explicit patent grant); retain upstream terms for Iron-derived
+  or other inherited material in Steel
 
 Documentation — keep under the repository license initially; split to CC BY 4.0
   only if that split is genuinely useful
@@ -48,18 +49,25 @@ Do not transfer until unresolved provenance questions are written down.
 
 ## Steel toolchain ancestry
 
-Steel inherits a toolchain ancestry worth documenting carefully before any
-public organization repository exists. License inventory is a required item on
-the [v0.1.0 gate](STEEL_V0_1_0_GATE.md).
+Steel v0.1.0 is published at https://github.com/The-Iridium-Road/Steel. It is
+derived from upstream Iron and has been heavily modified, optimized, and
+re-architected for Diamond-accel0. Upstream Iron is not an Iridium Road product.
 
-- [ ] Document which Iron / Peano / MLIR-AIE (or other) components influenced or
-      were incorporated into Steel
-- [ ] Separate original Iridium Road code from upstream-derived code
-- [ ] Record licenses for each incorporated component
-- [ ] Confirm the public Steel license story is accurate when
-      [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md) is closed
-- [ ] Ensure organization materials describe Steel as Iridium Road artifact
-      tooling without implying ownership of AMD/upstream projects
+Primary inventory lives in the Steel repository:
+
+- LICENSE, NOTICE
+- ACKNOWLEDGEMENTS.md (Iron origin, credit)
+- steel/LICENSE_INVENTORY.md
+
+Org materials should describe Steel as Iridium Road compile-only artifact
+tooling without claiming ownership of Iron, Peano, or MLIR-AIE. Historical ship
+criteria: [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md).
+
+Maintainer checks (keep current as Steel evolves):
+
+- [ ] Steel ACKNOWLEDGEMENTS and LICENSE_INVENTORY stay accurate after merges
+- [ ] Org profile / architecture wording still matches Steel’s public story
+- [ ] No implication that Iridium Road owns upstream Iron
 
 ## Pull requests touching provenance
 

@@ -41,7 +41,8 @@ See [REPOSITORY_MIGRATION.md](REPOSITORY_MIGRATION.md):
 
 1. `.github`
 2. Carbon-XDNA
-3. Steel (after [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md); create under org)
+3. Steel (landed — https://github.com/The-Iridium-Road/Steel v0.1.0;
+   historical criteria: [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md))
 4. Diamond-accel0
 5. NPUTOP when presentable
 6. Examples / utilities later
@@ -57,8 +58,8 @@ Fedora-oriented AMD XDNA kernel driver stack providing robust NPU execution,
 capability discovery, diagnostics, and observability.
 
 Steel
-Compile-only NPU artifact tooling for The Iridium Road: compile, optimize, and
-construct executable NPU artifacts for Diamond and other consumers.
+The Iridium Road’s low-latency compiler subsystem, producing executable AMD
+XDNA NPU artifacts for the Diamond runtime.
 
 Diamond-accel0
 Userspace AMD NPU runtime and execution platform, directly downstream of
@@ -72,7 +73,7 @@ Carbon-XDNA and Fedora's XDNA driver stack. Diamond is not a kernel driver.
 Apply only after the corresponding repositories exist and are presentable:
 
 1. Carbon-XDNA
-2. Steel (after v0.1.0 publish)
+2. Steel (pin-eligible at v0.1.0)
 3. Diamond-accel0
 4. NPUTOP (when ready)
 5. Documentation / architecture surface
@@ -90,7 +91,6 @@ Do not treat creation of this file as authorization to:
 
 - Change organization settings
 - Transfer or delete repositories
-- Publish Steel before the [v0.1.0 gate](STEEL_V0_1_0_GATE.md)
 - Apply branch protections, rulesets, or pins
 - Start unrelated product work (runtime backends, major driver feature branches,
   observability redesigns, or new example workloads) as a side effect of org

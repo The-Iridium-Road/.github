@@ -1,7 +1,7 @@
 # Repository Migration Checklist
 
 Summary
-How repositories land under `The-Iridium-Road`: classify, invent licenses,
+How repositories land under `The-Iridium-Road`: classify, inventory licenses,
 transfer or create, validate remotes. Transfers and creates are live actions and
 need a separately approved phase. This file does not move anything by itself.
 
@@ -26,8 +26,9 @@ Do not migrate a repo merely because it once mentioned NPUs.
 Carbon-XDNA — core — Developer Preview / v0.6.0
   Migrate first after .github
 
-Steel — core / tooling — In development / pre-v0.1.0
-  Create under org when STEEL_V0_1_0_GATE.md passes
+Steel — core / tooling — Experimental / v0.1.0
+  Landed: https://github.com/The-Iridium-Road/Steel
+  (Iron-derived; heavily modified for Diamond-accel0)
 
 Diamond-accel0 — core — Experimental / v0.0.5
   Migrate after Steel’s org landing (Carbon → Steel → Diamond)
@@ -46,16 +47,15 @@ Iron / Peano / MLIR-AIE — unrelated (external) — Upstream/reference
 
 - [ ] Complete [LICENSE_AND_PROVENANCE.md](LICENSE_AND_PROVENANCE.md) inventory
       for the candidate repository before transfer or public create
-- [ ] Especially for Steel: finish ancestry inventory as part of
-      [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md)
+- [ ] For Steel: keep ancestry accurate in the Steel repo (LICENSE, NOTICE,
+      ACKNOWLEDGEMENTS, steel/LICENSE_INVENTORY.md); see also
+      [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md) (historical)
 
 ## Landing order
 
 1. `.github` (organization control plane — this repository)
 2. Carbon-XDNA
-3. Steel — when the [v0.1.0 gate](STEEL_V0_1_0_GATE.md) passes; create
-   `The-Iridium-Road/Steel` directly under the organization when possible
-   (prefer create over personal-account-then-transfer)
+3. Steel — landed at https://github.com/The-Iridium-Road/Steel (v0.1.0)
 4. Diamond-accel0
 5. NPUTOP or other observability projects (only if presentable)
 6. Examples and utilities later
@@ -111,16 +111,17 @@ After transfer:
 - [ ] Confirm org default community health files apply or are overridden intentionally
 - [ ] Apply branch protection when ready ([SECURITY_BASELINE.md](SECURITY_BASELINE.md))
 
-## Steel create checklist (prefer over transfer)
+## Steel landed verification
 
-When [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md) is complete:
+Steel v0.1.0 is public. Confirm org materials stay consistent:
 
-- [ ] Create `The-Iridium-Road/Steel` under the organization
-- [ ] Push history that has been scrubbed of secrets, junk, and giant artifacts
-- [ ] Tag `v0.1.0` and publish release notes
-- [ ] Set description, topics, and README status
-- [ ] Required: enable private vulnerability reporting (not landed until done)
-- [ ] Link from organization profile materials and pins when ready
+- [x] Repository exists: https://github.com/The-Iridium-Road/Steel
+- [x] Tag `v0.1.0` published
+- [ ] Org profile / root README / SUPPORT / CONTRIBUTING link the live repo
+- [ ] Private vulnerability reporting enabled on Steel
+- [ ] Pins updated when ready ([ORG_BOOTSTRAP.md](ORG_BOOTSTRAP.md))
+- [ ] Historical gate record remains accurate
+      ([STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md))
 
 ## Suggested repository descriptions
 
@@ -129,8 +130,9 @@ Fedora-oriented AMD XDNA kernel driver stack providing robust NPU execution,
 capability discovery, diagnostics, and observability.
 
 Steel
-Compile-only NPU artifact tooling for The Iridium Road: compile, optimize, and
-construct executable NPU artifacts for Diamond and other consumers.
+The Iridium Road’s low-latency compiler subsystem, producing executable AMD
+XDNA NPU artifacts for the Diamond runtime. Derived from upstream Iron; heavily
+modified for Diamond-accel0.
 
 Diamond-accel0
 Userspace AMD NPU runtime and execution platform, directly downstream of
