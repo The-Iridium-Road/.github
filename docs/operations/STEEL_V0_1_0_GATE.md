@@ -5,7 +5,7 @@ Ship criteria that defined the first public Steel release. v0.1.0 is published
 at https://github.com/The-Iridium-Road/Steel. This document is kept as the
 record of what “done enough to ship” meant—not as an open blocker list.
 
-v0.1.1 and v0.1.2 have since shipped; current tip is Experimental v0.1.2.
+v0.1.1 through v0.1.3 have since shipped; current tip is Experimental v0.1.3.
 This file remains the first-ship record only. Release line:
 [RELEASE_CONVENTIONS.md](RELEASE_CONVENTIONS.md).
 
@@ -39,6 +39,6 @@ This file remains the first-ship record only. Release line:
 
 Confirm after publish (live org actions—not implied by editing this file):
 
-- [x] Org profile and root README link Steel correctly (current tip v0.1.2)
+- [x] Org profile and root README link Steel correctly (current tip v0.1.3)
 - [ ] Private vulnerability reporting enabled on The-Iridium-Road/Steel
 - [ ] Pins updated when ready ([ORG_BOOTSTRAP.md](ORG_BOOTSTRAP.md))

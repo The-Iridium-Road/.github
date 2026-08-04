@@ -3,7 +3,7 @@
 Summary
 How versions, maturity labels, and changelogs work across Iridium Road repos.
 Steel’s first-public-tag criteria are historical in STEEL_V0_1_0_GATE.md.
-Current Steel tip is Experimental v0.1.2. Cutting releases and pins are live
+Current Steel tip is Experimental v0.1.3. Cutting releases and pins are live
 actions after explicit approval.
 
 ## Version tags
@@ -30,8 +30,8 @@ Current public expectations (update when reality changes):
 
 ```text
 Carbon-XDNA — Developer Preview, v0.6.0
-Steel — Experimental, v0.1.2 — https://github.com/The-Iridium-Road/Steel
-Diamond-accel0 — In development, v0.0.3 — heavy development; not release-ready
+Steel — Experimental, v0.1.3 — https://github.com/The-Iridium-Road/Steel
+Diamond-accel0 — In development, v0.0.5 — native XDNA userspace; Phase 6 join/CLI in progress; not a v0.1.0 product yet
 NPUTOP — Planned; prototype / integration pending
 Examples / utilities — Planned category, not a fake repository
 ```
@@ -54,10 +54,14 @@ Published: https://github.com/The-Iridium-Road/Steel
   CMake embed fix; pair with toolchain-v2026.08.2
   (https://github.com/The-Iridium-Road/Steel/releases/tag/v0.1.2,
   https://github.com/The-Iridium-Road/Steel/releases/tag/toolchain-v2026.08.2)
+- v0.1.3 — additive `steel_io_abi/1` native-join prepare keys for Diamond;
+  toolchain still toolchain-v2026.08.2 (no new forge-bag Release)
+  (https://github.com/The-Iridium-Road/Steel/releases/tag/v0.1.3;
+  normative: steel/NATIVE_JOIN_PHASE.md)
 
 Product tags and toolchain tags are independent. Consumers pair via
-`steel/toolchain.lock`. Depth (STEEL_API, forge README, LEGAL) stays in the
-Steel repository—not duplicated here.
+`steel/toolchain.lock`. Depth (STEEL_API, NATIVE_JOIN_PHASE, forge README,
+LEGAL) stays in the Steel repository—not duplicated here.
 
 ## Relationship to live bootstrap
 

@@ -26,7 +26,7 @@ Applications / utilities
  AMD XDNA hardware / firmware
 ```
 
-Landing order: `.github` → Carbon-XDNA → Steel (landed at v0.1.2) →
+Landing order: `.github` → Carbon-XDNA → Steel (landed at v0.1.3) →
 Diamond-accel0 → NPUTOP → examples. See
 [REPOSITORY_MIGRATION.md](../docs/operations/REPOSITORY_MIGRATION.md).
 
@@ -61,19 +61,23 @@ Does not own: execution policy or compilation.
 
 ### Steel status and provenance
 
-Current tip: Experimental v0.1.2
-(https://github.com/The-Iridium-Road/Steel/releases/tag/v0.1.2).
-Paired toolchain Release: toolchain-v2026.08.2. Product tags and toolchain tags
-are independent; consumers pair via `steel/toolchain.lock`.
+Current tip: Experimental v0.1.3
+(https://github.com/The-Iridium-Road/Steel/releases/tag/v0.1.3).
+Paired toolchain Release: toolchain-v2026.08.2 (unchanged for v0.1.3; no new
+forge-bag Release). Product tags and toolchain tags are independent; consumers
+pair via `steel/toolchain.lock`.
 
 Steel remains compile-only artifact production for Diamond-accel0: no NPU open,
 no XRT in the production library. Integrator contract since the 0.1 line: pinned
 toolchain Release (since v0.1.1); forge-owned FULL packager via hrx `xclbinutil`
 inside the lit bag—not host `/opt/xilinx/xrt` (since v0.1.2); embed-safe CMake
 (`CMAKE_CURRENT_SOURCE_DIR`) so Diamond can `add_subdirectory` without path
-hacks (since v0.1.2). Public ABI shapes since v0.1.0 are unchanged; version
-macros moved 0.1.0 → 0.1.2. Depth: Steel README, STEEL_API.md, forge README,
-ACKNOWLEDGEMENTS, and releases—not duplicated here.
+hacks (since v0.1.2); additive `steel_io_abi/1` native-join prepare keys on
+successful forge so Diamond can prepare the join pin without parsing MLIR or
+Bootstrapping opcode (since v0.1.3). Public ABI shapes since v0.1.0 are
+unchanged; version macros track the product tip (0.1.3). Depth: Steel README,
+STEEL_API.md, NATIVE_JOIN_PHASE.md, forge README, ACKNOWLEDGEMENTS, and
+releases—not duplicated here.
 
 The historical ship criteria that defined the first public tag (v0.1.0) are
 recorded in [STEEL_V0_1_0_GATE.md](../docs/operations/STEEL_V0_1_0_GATE.md).
@@ -90,6 +94,18 @@ detail live in Steel’s ACKNOWLEDGEMENTS.md.
 Diamond owns compilation orchestration: when to compile, which artifacts to
 select or cache, how results enter execution. Steel owns artifact production.
 Do not describe Diamond as the compiler itself.
+
+Status: In development v0.0.5 — working native XDNA userspace runtime with
+program/product store, optional Steel compile-to-product, and hardware-proven
+scale execution. Phases 1–5 complete; Phase 6 (Steel→native join and reference
+CLI) in progress toward a later v0.1.0 product line. Not landed under the org
+yet.
+
+Diamond consumes Steel products/forge results; prepare-program joins products
+to native exec. Today’s production path is native DRM/amdxdna (XRT oracle-only).
+The Carbon-enhanced path is deferred for now. The stack diagram above remains
+the intended long-term ownership map—not a claim that Carbon is required for
+current Diamond hardware proves.
 
 ## External tooling (not Iridium Road)
 

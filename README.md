@@ -41,13 +41,14 @@ Carbon-XDNA
 
 Steel
   Compile-only tooling: compile, optimize, construct executable NPU artifacts
-  Public at https://github.com/The-Iridium-Road/Steel (v0.1.2)
+  Public at https://github.com/The-Iridium-Road/Steel (v0.1.3)
   Derived from upstream Iron; heavily changed for Diamond-accel0
 
 Diamond-accel0
-  Userspace runtime in heavy development; not release-ready (v0.0.3)
-  lifecycle · scheduling · orchestration · dispatch · APIs
-  Not a kernel driver; does not own artifact production
+  Userspace runtime In development, v0.0.5 — native XDNA userspace
+  Working program/product store, optional Steel compile-to-product,
+  hardware-proven scale execution; Phase 6 join/CLI in progress
+  Not a v0.1.0 product yet; not a kernel driver; does not own artifact production
 
 Observability and utilities (planned)
   monitoring · diagnostics · profiling · examples · practical applications
@@ -58,11 +59,12 @@ Carbon, becomes Steel—the compile-only layer Diamond consumes.
 
 ### Steel for integrators (since v0.1.0)
 
-Current tip: Experimental v0.1.2
-(https://github.com/The-Iridium-Road/Steel/releases/tag/v0.1.2).
+Current tip: Experimental v0.1.3
+(https://github.com/The-Iridium-Road/Steel/releases/tag/v0.1.3).
 Paired toolchain Release: toolchain-v2026.08.2
-(https://github.com/The-Iridium-Road/Steel/releases/tag/toolchain-v2026.08.2).
-Product tags and toolchain tags are independent; pair via `steel/toolchain.lock`.
+(https://github.com/The-Iridium-Road/Steel/releases/tag/toolchain-v2026.08.2)
+— unchanged for v0.1.3 (no new forge-bag Release). Product tags and toolchain
+tags are independent; pair via `steel/toolchain.lock`.
 
 - Still compile-only `libsteel_bridge` / `steel_forge`: no NPU open; production
   link line stays free of XRT/device libs.
@@ -72,8 +74,12 @@ Product tags and toolchain tags are independent; pair via `steel/toolchain.lock`
   bag—not host `/opt/xilinx/xrt`. INSTS unchanged.
 - Since v0.1.2: CMake is embed-safe (`CMAKE_CURRENT_SOURCE_DIR`); Diamond can
   `add_subdirectory` Steel without rewriting Steel’s source-root paths.
-- Depth: Steel README, `steel/STEEL_API.md`, `forge/README.md`, and releases.
-  Ownership and contract summary:
+- Since v0.1.3: successful forge emits additive `steel_io_abi/1` native-join
+  prepare keys (IO ports/`nelem` + CMD contract) so Diamond can prepare the
+  join pin without parsing MLIR or Bootstrapping opcode. Details:
+  `steel/NATIVE_JOIN_PHASE.md` and `steel/STEEL_API.md` at the tip tag.
+- Depth: Steel README, `steel/STEEL_API.md`, `forge/README.md`,
+  `steel/NATIVE_JOIN_PHASE.md`, and releases. Ownership and contract summary:
   [profile/ARCHITECTURE.md](profile/ARCHITECTURE.md).
 
 ```text
@@ -101,8 +107,8 @@ and Steel’s ACKNOWLEDGEMENTS for provenance.
 
 ```text
 Carbon-XDNA — Developer Preview, v0.6.0 (current focus of active use)
-Steel — Experimental, v0.1.2 — https://github.com/The-Iridium-Road/Steel
-Diamond-accel0 — In development, v0.0.3 — heavy development; not release-ready
+Steel — Experimental, v0.1.3 — https://github.com/The-Iridium-Road/Steel
+Diamond-accel0 — In development, v0.0.5 — native XDNA userspace; Phase 6 join/CLI in progress; not a v0.1.0 product yet
 NPUTOP — Planned; prototype exists elsewhere, not presented as org-ready yet
 Examples / utilities — Planned category, not a published repo yet
 ```
@@ -186,7 +192,7 @@ Start here if you want…
 ```text
 1. .github          (this repository)
 2. Carbon-XDNA
-3. Steel            (landed — v0.1.2 at The-Iridium-Road/Steel)
+3. Steel            (landed — v0.1.3 at The-Iridium-Road/Steel)
 4. Diamond-accel0
 5. NPUTOP           (when presentable)
 6. Examples         (later)

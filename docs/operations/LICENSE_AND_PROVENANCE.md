@@ -13,9 +13,12 @@ Organization .github control-plane repo — Apache-2.0 (see root LICENSE)
 Carbon / kernel-oriented code — preserve applicable Linux/kernel licensing;
   generally GPL-2.0-only for kernel modules and kernel-derived material
 
-Original userspace (e.g. Diamond; new Steel code) — prefer Apache-2.0 for new
+Original userspace (new Steel code and similar) — prefer Apache-2.0 for new
   original code (explicit patent grant); retain upstream terms for Iron-derived
   or other inherited material in Steel
+
+Diamond-accel0 — planned MIT when that repository lands (overrides the generic
+  Apache-2.0 userspace preference for Diamond specifically)
 
 Documentation — keep under the repository license initially; split to CC BY 4.0
   only if that split is genuinely useful
@@ -49,7 +52,7 @@ Do not transfer until unresolved provenance questions are written down.
 
 ## Steel toolchain ancestry
 
-Steel product tip is Experimental v0.1.2 at
+Steel product tip is Experimental v0.1.3 at
 https://github.com/The-Iridium-Road/Steel. It is derived from upstream Iron and
 has been heavily modified, optimized, and re-architected for Diamond-accel0.
 Upstream Iron is not an Iridium Road product.

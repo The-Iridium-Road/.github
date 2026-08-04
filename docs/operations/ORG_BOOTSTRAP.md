@@ -41,7 +41,7 @@ See [REPOSITORY_MIGRATION.md](REPOSITORY_MIGRATION.md):
 
 1. `.github`
 2. Carbon-XDNA
-3. Steel (landed — https://github.com/The-Iridium-Road/Steel v0.1.2;
+3. Steel (landed — https://github.com/The-Iridium-Road/Steel v0.1.3;
    first-ship criteria: [STEEL_V0_1_0_GATE.md](STEEL_V0_1_0_GATE.md))
 4. Diamond-accel0
 5. NPUTOP when presentable
@@ -73,7 +73,7 @@ Carbon-XDNA and Fedora's XDNA driver stack. Diamond is not a kernel driver.
 Apply only after the corresponding repositories exist and are presentable:
 
 1. Carbon-XDNA
-2. Steel (pin-eligible at v0.1.2)
+2. Steel (pin-eligible at v0.1.3)
 3. Diamond-accel0
 4. NPUTOP (when ready)
 5. Documentation / architecture surface

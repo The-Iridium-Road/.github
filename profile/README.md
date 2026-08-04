@@ -33,15 +33,17 @@ Landing order (runtime relationships are in [ARCHITECTURE.md](ARCHITECTURE.md)):
   capability discovery, execution transport, diagnostics, observability, fault
   containment). Maturity: see Current status.
 - Steel — Compile-only tooling to compile, optimize, and construct executable
-  NPU artifacts. Public at https://github.com/The-Iridium-Road/Steel (v0.1.2).
+  NPU artifacts. Public at https://github.com/The-Iridium-Road/Steel (v0.1.3).
   Derived from upstream Iron; heavily modified for Diamond-accel0. The name is
   intentional: Iron + Carbon → Steel. Integrator notes (toolchain pin, forge
-  FULL packager, CMake embed): root [README.md](../README.md) and
+  FULL packager, CMake embed, native-join `io_abi`): root
+  [README.md](../README.md) and [ARCHITECTURE.md](ARCHITECTURE.md).
+- Diamond-accel0 — In development v0.0.5: working native XDNA userspace runtime
+  with program/product store, optional Steel compile-to-product, and
+  hardware-proven scale execution; source→Steel→verified NPU join and the
+  reference CLI are active Phase 6 work. Not a v0.1.0 product yet. Not a kernel
+  driver; does not own artifact production (Steel does). Details:
   [ARCHITECTURE.md](ARCHITECTURE.md).
-- Diamond-accel0 — Userspace runtime in heavy development; not release-ready
-  (v0.0.3). Lifecycle, scheduling, artifact selection, compile orchestration,
-  dispatch, APIs. Not a kernel driver; does not own artifact production (Steel
-  does).
 - Observability and utilities — Planned supporting work: monitoring, diagnostics,
   profiling, compatibility checks, reference workloads, and practical NPU
   applications.
@@ -53,8 +55,8 @@ Issues and pull requests are proposals, not merge obligations. See
 
 ```text
 Carbon-XDNA — Developer Preview, v0.6.0 (current focus of active use)
-Steel — Experimental, v0.1.2 — https://github.com/The-Iridium-Road/Steel
-Diamond-accel0 — In development, v0.0.3 — heavy development; not release-ready
+Steel — Experimental, v0.1.3 — https://github.com/The-Iridium-Road/Steel
+Diamond-accel0 — In development, v0.0.5 — native XDNA userspace; Phase 6 join/CLI in progress; not a v0.1.0 product yet
 NPUTOP — Planned; prototype exists elsewhere, not presented as org-ready yet
 Examples / utilities — Planned category, not a published repo yet
 ```
